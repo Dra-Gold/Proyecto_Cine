@@ -1,0 +1,907 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CineVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="RutCli" />
+          </Key>
+          <Property Name="RutCli" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="Id" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Edad" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="contraseña" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Comuna">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="CodigoR" Type="varchar" MaxLength="6" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Entrada">
+          <Key>
+            <PropertyRef Name="NBoleto" />
+          </Key>
+          <Property Name="NBoleto" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="NFun" Type="int" />
+          <Property Name="Precio" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Estreno">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="DescripcionE" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Funcion">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreF" Type="varchar" MaxLength="25" />
+          <Property Name="CodPel" Type="int" />
+          <Property Name="SalaId" Type="varchar" MaxLength="6" />
+          <Property Name="Estreno" Type="varchar" MaxLength="6" />
+          <Property Name="Dia" Type="varchar" MaxLength="50" />
+          <Property Name="HoraI" Type="varchar" MaxLength="15" />
+          <Property Name="HoraT" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Gene">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="DescripcionG" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Idioma">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="DescripcionI" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Pelicula">
+          <Key>
+            <PropertyRef Name="IdPelicula" />
+          </Key>
+          <Property Name="IdPelicula" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreP" Type="varchar" MaxLength="50" />
+          <Property Name="Genero" Type="varchar" MaxLength="6" />
+          <Property Name="Idioma" Type="varchar" MaxLength="6" />
+          <Property Name="Director" Type="varchar" MaxLength="50" />
+          <Property Name="Sinopsis" Type="varchar(max)" />
+          <Property Name="Imagen" Type="image" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Sala">
+          <Key>
+            <PropertyRef Name="IdSala" />
+          </Key>
+          <Property Name="IdSala" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="Sucur" Type="varchar" MaxLength="6" />
+          <Property Name="NSala" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Tipo" Type="varchar" MaxLength="25" />
+          <Property Name="Asientos" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Sucursal">
+          <Key>
+            <PropertyRef Name="CodigoCine" />
+          </Key>
+          <Property Name="CodigoCine" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="NombreS" Type="varchar" MaxLength="50" />
+          <Property Name="Direccion" Type="varchar" MaxLength="50" />
+          <Property Name="Comuna" Type="varchar" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="Tipo">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="DescripcionT" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="RutUsuario" />
+          </Key>
+          <Property Name="RutUsuario" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="Contraseña" Type="varchar" MaxLength="15" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Id" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Edad" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Genero" Type="varchar" MaxLength="50" />
+          <Property Name="Tipo" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Venta">
+          <Key>
+            <PropertyRef Name="NVenta" />
+          </Key>
+          <Property Name="NVenta" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="NBoleto" Type="varchar" MaxLength="6" />
+          <Property Name="CodigoU" Type="varchar" MaxLength="12" />
+          <Property Name="CodigoC" Type="varchar" MaxLength="12" />
+        </EntityType>
+        <Association Name="FKCargoUsuario">
+          <End Role="Tipo" Type="Self.Tipo" Multiplicity="0..1" />
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="Tipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCodigoCVenta">
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+          <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="RutCli" />
+            </Principal>
+            <Dependent Role="Venta">
+              <PropertyRef Name="CodigoC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCodigoRComuna">
+          <End Role="Region" Type="Self.Region" Multiplicity="0..1" />
+          <End Role="Comuna" Type="Self.Comuna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Region">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="Comuna">
+              <PropertyRef Name="CodigoR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCodigoUVenta">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="RutUsuario" />
+            </Principal>
+            <Dependent Role="Venta">
+              <PropertyRef Name="CodigoU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCodPelFuncion">
+          <End Role="Pelicula" Type="Self.Pelicula" Multiplicity="0..1" />
+          <End Role="Funcion" Type="Self.Funcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pelicula">
+              <PropertyRef Name="IdPelicula" />
+            </Principal>
+            <Dependent Role="Funcion">
+              <PropertyRef Name="CodPel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKComunaSucursal">
+          <End Role="Comuna" Type="Self.Comuna" Multiplicity="0..1" />
+          <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comuna">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="Sucursal">
+              <PropertyRef Name="Comuna" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkEstrenoFuncion">
+          <End Role="Estreno" Type="Self.Estreno" Multiplicity="0..1" />
+          <End Role="Funcion" Type="Self.Funcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estreno">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Funcion">
+              <PropertyRef Name="Estreno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKGeneroPelicula">
+          <End Role="Gene" Type="Self.Gene" Multiplicity="0..1" />
+          <End Role="Pelicula" Type="Self.Pelicula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gene">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pelicula">
+              <PropertyRef Name="Genero" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKIdiomaPelicula">
+          <End Role="Idioma" Type="Self.Idioma" Multiplicity="0..1" />
+          <End Role="Pelicula" Type="Self.Pelicula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Idioma">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pelicula">
+              <PropertyRef Name="Idioma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkNBoletoVenta">
+          <End Role="Entrada" Type="Self.Entrada" Multiplicity="0..1" />
+          <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Entrada">
+              <PropertyRef Name="NBoleto" />
+            </Principal>
+            <Dependent Role="Venta">
+              <PropertyRef Name="NBoleto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkNFunEntrada">
+          <End Role="Funcion" Type="Self.Funcion" Multiplicity="0..1" />
+          <End Role="Entrada" Type="Self.Entrada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Funcion">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="Entrada">
+              <PropertyRef Name="NFun" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkSalaIdFuncion">
+          <End Role="Sala" Type="Self.Sala" Multiplicity="0..1" />
+          <End Role="Funcion" Type="Self.Funcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sala">
+              <PropertyRef Name="IdSala" />
+            </Principal>
+            <Dependent Role="Funcion">
+              <PropertyRef Name="SalaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSucurSala">
+          <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="0..1" />
+          <End Role="Sala" Type="Self.Sala" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sucursal">
+              <PropertyRef Name="CodigoCine" />
+            </Principal>
+            <Dependent Role="Sala">
+              <PropertyRef Name="Sucur" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CineVModelStoreContainer">
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Comuna" EntityType="Self.Comuna" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Entrada" EntityType="Self.Entrada" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Estreno" EntityType="Self.Estreno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Funcion" EntityType="Self.Funcion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gene" EntityType="Self.Gene" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Idioma" EntityType="Self.Idioma" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pelicula" EntityType="Self.Pelicula" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Region" EntityType="Self.Region" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sala" EntityType="Self.Sala" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sucursal" EntityType="Self.Sucursal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tipo" EntityType="Self.Tipo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FKCargoUsuario" Association="Self.FKCargoUsuario">
+            <End Role="Tipo" EntitySet="Tipo" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FKCodigoCVenta" Association="Self.FKCodigoCVenta">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Venta" EntitySet="Venta" />
+          </AssociationSet>
+          <AssociationSet Name="FKCodigoRComuna" Association="Self.FKCodigoRComuna">
+            <End Role="Region" EntitySet="Region" />
+            <End Role="Comuna" EntitySet="Comuna" />
+          </AssociationSet>
+          <AssociationSet Name="FKCodigoUVenta" Association="Self.FKCodigoUVenta">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Venta" EntitySet="Venta" />
+          </AssociationSet>
+          <AssociationSet Name="FKCodPelFuncion" Association="Self.FKCodPelFuncion">
+            <End Role="Pelicula" EntitySet="Pelicula" />
+            <End Role="Funcion" EntitySet="Funcion" />
+          </AssociationSet>
+          <AssociationSet Name="FKComunaSucursal" Association="Self.FKComunaSucursal">
+            <End Role="Comuna" EntitySet="Comuna" />
+            <End Role="Sucursal" EntitySet="Sucursal" />
+          </AssociationSet>
+          <AssociationSet Name="fkEstrenoFuncion" Association="Self.fkEstrenoFuncion">
+            <End Role="Estreno" EntitySet="Estreno" />
+            <End Role="Funcion" EntitySet="Funcion" />
+          </AssociationSet>
+          <AssociationSet Name="FKGeneroPelicula" Association="Self.FKGeneroPelicula">
+            <End Role="Gene" EntitySet="Gene" />
+            <End Role="Pelicula" EntitySet="Pelicula" />
+          </AssociationSet>
+          <AssociationSet Name="FKIdiomaPelicula" Association="Self.FKIdiomaPelicula">
+            <End Role="Idioma" EntitySet="Idioma" />
+            <End Role="Pelicula" EntitySet="Pelicula" />
+          </AssociationSet>
+          <AssociationSet Name="FkNBoletoVenta" Association="Self.FkNBoletoVenta">
+            <End Role="Entrada" EntitySet="Entrada" />
+            <End Role="Venta" EntitySet="Venta" />
+          </AssociationSet>
+          <AssociationSet Name="fkNFunEntrada" Association="Self.fkNFunEntrada">
+            <End Role="Funcion" EntitySet="Funcion" />
+            <End Role="Entrada" EntitySet="Entrada" />
+          </AssociationSet>
+          <AssociationSet Name="fkSalaIdFuncion" Association="Self.fkSalaIdFuncion">
+            <End Role="Sala" EntitySet="Sala" />
+            <End Role="Funcion" EntitySet="Funcion" />
+          </AssociationSet>
+          <AssociationSet Name="FKSucurSala" Association="Self.FKSucurSala">
+            <End Role="Sucursal" EntitySet="Sucursal" />
+            <End Role="Sala" EntitySet="Sala" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CineVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CineVEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cliente" EntityType="CineVModel.Cliente" />
+          <EntitySet Name="Comuna" EntityType="CineVModel.Comuna" />
+          <EntitySet Name="Entrada" EntityType="CineVModel.Entrada" />
+          <EntitySet Name="Estreno" EntityType="CineVModel.Estreno" />
+          <EntitySet Name="Funcion" EntityType="CineVModel.Funcion" />
+          <EntitySet Name="Gene" EntityType="CineVModel.Gene" />
+          <EntitySet Name="Idioma" EntityType="CineVModel.Idioma" />
+          <EntitySet Name="Pelicula" EntityType="CineVModel.Pelicula" />
+          <EntitySet Name="Region" EntityType="CineVModel.Region" />
+          <EntitySet Name="Sala" EntityType="CineVModel.Sala" />
+          <EntitySet Name="Sucursal" EntityType="CineVModel.Sucursal" />
+          <EntitySet Name="Tipo" EntityType="CineVModel.Tipo" />
+          <EntitySet Name="Usuario" EntityType="CineVModel.Usuario" />
+          <EntitySet Name="Venta" EntityType="CineVModel.Venta" />
+          <AssociationSet Name="FKCodigoCVenta" Association="CineVModel.FKCodigoCVenta">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Venta" EntitySet="Venta" />
+          </AssociationSet>
+          <AssociationSet Name="FKCodigoRComuna" Association="CineVModel.FKCodigoRComuna">
+            <End Role="Region" EntitySet="Region" />
+            <End Role="Comuna" EntitySet="Comuna" />
+          </AssociationSet>
+          <AssociationSet Name="FKComunaSucursal" Association="CineVModel.FKComunaSucursal">
+            <End Role="Comuna" EntitySet="Comuna" />
+            <End Role="Sucursal" EntitySet="Sucursal" />
+          </AssociationSet>
+          <AssociationSet Name="FkNBoletoVenta" Association="CineVModel.FkNBoletoVenta">
+            <End Role="Entrada" EntitySet="Entrada" />
+            <End Role="Venta" EntitySet="Venta" />
+          </AssociationSet>
+          <AssociationSet Name="fkNFunEntrada" Association="CineVModel.fkNFunEntrada">
+            <End Role="Funcion" EntitySet="Funcion" />
+            <End Role="Entrada" EntitySet="Entrada" />
+          </AssociationSet>
+          <AssociationSet Name="fkEstrenoFuncion" Association="CineVModel.fkEstrenoFuncion">
+            <End Role="Estreno" EntitySet="Estreno" />
+            <End Role="Funcion" EntitySet="Funcion" />
+          </AssociationSet>
+          <AssociationSet Name="FKCodPelFuncion" Association="CineVModel.FKCodPelFuncion">
+            <End Role="Pelicula" EntitySet="Pelicula" />
+            <End Role="Funcion" EntitySet="Funcion" />
+          </AssociationSet>
+          <AssociationSet Name="fkSalaIdFuncion" Association="CineVModel.fkSalaIdFuncion">
+            <End Role="Sala" EntitySet="Sala" />
+            <End Role="Funcion" EntitySet="Funcion" />
+          </AssociationSet>
+          <AssociationSet Name="FKGeneroPelicula" Association="CineVModel.FKGeneroPelicula">
+            <End Role="Gene" EntitySet="Gene" />
+            <End Role="Pelicula" EntitySet="Pelicula" />
+          </AssociationSet>
+          <AssociationSet Name="FKIdiomaPelicula" Association="CineVModel.FKIdiomaPelicula">
+            <End Role="Idioma" EntitySet="Idioma" />
+            <End Role="Pelicula" EntitySet="Pelicula" />
+          </AssociationSet>
+          <AssociationSet Name="FKSucurSala" Association="CineVModel.FKSucurSala">
+            <End Role="Sucursal" EntitySet="Sucursal" />
+            <End Role="Sala" EntitySet="Sala" />
+          </AssociationSet>
+          <AssociationSet Name="FKCargoUsuario" Association="CineVModel.FKCargoUsuario">
+            <End Role="Tipo" EntitySet="Tipo" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FKCodigoUVenta" Association="CineVModel.FKCodigoUVenta">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Venta" EntitySet="Venta" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="RutCli" />
+          </Key>
+          <Property Name="RutCli" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Id" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Edad" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="contraseña" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Venta" Relationship="CineVModel.FKCodigoCVenta" FromRole="Cliente" ToRole="Venta" />
+        </EntityType>
+        <EntityType Name="Comuna">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoR" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Region" Relationship="CineVModel.FKCodigoRComuna" FromRole="Comuna" ToRole="Region" />
+          <NavigationProperty Name="Sucursal" Relationship="CineVModel.FKComunaSucursal" FromRole="Comuna" ToRole="Sucursal" />
+        </EntityType>
+        <EntityType Name="Entrada">
+          <Key>
+            <PropertyRef Name="NBoleto" />
+          </Key>
+          <Property Name="NBoleto" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="NFun" Type="Int32" />
+          <Property Name="Precio" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="Venta" Relationship="CineVModel.FkNBoletoVenta" FromRole="Entrada" ToRole="Venta" />
+          <NavigationProperty Name="Funcion" Relationship="CineVModel.fkNFunEntrada" FromRole="Entrada" ToRole="Funcion" />
+        </EntityType>
+        <EntityType Name="Estreno">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="DescripcionE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Funcion" Relationship="CineVModel.fkEstrenoFuncion" FromRole="Estreno" ToRole="Funcion" />
+        </EntityType>
+        <EntityType Name="Funcion">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreF" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="CodPel" Type="Int32" />
+          <Property Name="SalaId" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Estreno" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Dia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HoraI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="HoraT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Entrada" Relationship="CineVModel.fkNFunEntrada" FromRole="Funcion" ToRole="Entrada" />
+          <NavigationProperty Name="Estreno1" Relationship="CineVModel.fkEstrenoFuncion" FromRole="Funcion" ToRole="Estreno" />
+          <NavigationProperty Name="Pelicula" Relationship="CineVModel.FKCodPelFuncion" FromRole="Funcion" ToRole="Pelicula" />
+          <NavigationProperty Name="Sala" Relationship="CineVModel.fkSalaIdFuncion" FromRole="Funcion" ToRole="Sala" />
+        </EntityType>
+        <EntityType Name="Gene">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="DescripcionG" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Pelicula" Relationship="CineVModel.FKGeneroPelicula" FromRole="Gene" ToRole="Pelicula" />
+        </EntityType>
+        <EntityType Name="Idioma">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="DescripcionI" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Pelicula" Relationship="CineVModel.FKIdiomaPelicula" FromRole="Idioma" ToRole="Pelicula" />
+        </EntityType>
+        <EntityType Name="Pelicula">
+          <Key>
+            <PropertyRef Name="IdPelicula" />
+          </Key>
+          <Property Name="IdPelicula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Genero" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Idioma" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Director" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sinopsis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Funcion" Relationship="CineVModel.FKCodPelFuncion" FromRole="Pelicula" ToRole="Funcion" />
+          <NavigationProperty Name="Gene" Relationship="CineVModel.FKGeneroPelicula" FromRole="Pelicula" ToRole="Gene" />
+          <NavigationProperty Name="Idioma1" Relationship="CineVModel.FKIdiomaPelicula" FromRole="Pelicula" ToRole="Idioma" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Comuna" Relationship="CineVModel.FKCodigoRComuna" FromRole="Region" ToRole="Comuna" />
+        </EntityType>
+        <EntityType Name="Sala">
+          <Key>
+            <PropertyRef Name="IdSala" />
+          </Key>
+          <Property Name="IdSala" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Sucur" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="NSala" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Tipo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Asientos" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="Funcion" Relationship="CineVModel.fkSalaIdFuncion" FromRole="Sala" ToRole="Funcion" />
+          <NavigationProperty Name="Sucursal" Relationship="CineVModel.FKSucurSala" FromRole="Sala" ToRole="Sucursal" />
+        </EntityType>
+        <EntityType Name="Sucursal">
+          <Key>
+            <PropertyRef Name="CodigoCine" />
+          </Key>
+          <Property Name="CodigoCine" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="NombreS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Comuna" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Comuna1" Relationship="CineVModel.FKComunaSucursal" FromRole="Sucursal" ToRole="Comuna" />
+          <NavigationProperty Name="Sala" Relationship="CineVModel.FKSucurSala" FromRole="Sucursal" ToRole="Sala" />
+        </EntityType>
+        <EntityType Name="Tipo">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="DescripcionT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Usuario" Relationship="CineVModel.FKCargoUsuario" FromRole="Tipo" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="RutUsuario" />
+          </Key>
+          <Property Name="RutUsuario" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Contraseña" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Id" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Edad" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Genero" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tipo1" Relationship="CineVModel.FKCargoUsuario" FromRole="Usuario" ToRole="Tipo" />
+          <NavigationProperty Name="Venta" Relationship="CineVModel.FKCodigoUVenta" FromRole="Usuario" ToRole="Venta" />
+        </EntityType>
+        <EntityType Name="Venta">
+          <Key>
+            <PropertyRef Name="NVenta" />
+          </Key>
+          <Property Name="NVenta" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="NBoleto" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoU" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoC" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Cliente" Relationship="CineVModel.FKCodigoCVenta" FromRole="Venta" ToRole="Cliente" />
+          <NavigationProperty Name="Entrada" Relationship="CineVModel.FkNBoletoVenta" FromRole="Venta" ToRole="Entrada" />
+          <NavigationProperty Name="Usuario" Relationship="CineVModel.FKCodigoUVenta" FromRole="Venta" ToRole="Usuario" />
+        </EntityType>
+        <Association Name="FKCodigoCVenta">
+          <End Type="CineVModel.Cliente" Role="Cliente" Multiplicity="0..1" />
+          <End Type="CineVModel.Venta" Role="Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="RutCli" />
+            </Principal>
+            <Dependent Role="Venta">
+              <PropertyRef Name="CodigoC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCodigoRComuna">
+          <End Type="CineVModel.Region" Role="Region" Multiplicity="0..1" />
+          <End Type="CineVModel.Comuna" Role="Comuna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Region">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="Comuna">
+              <PropertyRef Name="CodigoR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKComunaSucursal">
+          <End Type="CineVModel.Comuna" Role="Comuna" Multiplicity="0..1" />
+          <End Type="CineVModel.Sucursal" Role="Sucursal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comuna">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="Sucursal">
+              <PropertyRef Name="Comuna" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkNBoletoVenta">
+          <End Type="CineVModel.Entrada" Role="Entrada" Multiplicity="0..1" />
+          <End Type="CineVModel.Venta" Role="Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Entrada">
+              <PropertyRef Name="NBoleto" />
+            </Principal>
+            <Dependent Role="Venta">
+              <PropertyRef Name="NBoleto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkNFunEntrada">
+          <End Type="CineVModel.Funcion" Role="Funcion" Multiplicity="0..1" />
+          <End Type="CineVModel.Entrada" Role="Entrada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Funcion">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="Entrada">
+              <PropertyRef Name="NFun" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkEstrenoFuncion">
+          <End Type="CineVModel.Estreno" Role="Estreno" Multiplicity="0..1" />
+          <End Type="CineVModel.Funcion" Role="Funcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estreno">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Funcion">
+              <PropertyRef Name="Estreno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCodPelFuncion">
+          <End Type="CineVModel.Pelicula" Role="Pelicula" Multiplicity="0..1" />
+          <End Type="CineVModel.Funcion" Role="Funcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pelicula">
+              <PropertyRef Name="IdPelicula" />
+            </Principal>
+            <Dependent Role="Funcion">
+              <PropertyRef Name="CodPel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkSalaIdFuncion">
+          <End Type="CineVModel.Sala" Role="Sala" Multiplicity="0..1" />
+          <End Type="CineVModel.Funcion" Role="Funcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sala">
+              <PropertyRef Name="IdSala" />
+            </Principal>
+            <Dependent Role="Funcion">
+              <PropertyRef Name="SalaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKGeneroPelicula">
+          <End Type="CineVModel.Gene" Role="Gene" Multiplicity="0..1" />
+          <End Type="CineVModel.Pelicula" Role="Pelicula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gene">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pelicula">
+              <PropertyRef Name="Genero" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKIdiomaPelicula">
+          <End Type="CineVModel.Idioma" Role="Idioma" Multiplicity="0..1" />
+          <End Type="CineVModel.Pelicula" Role="Pelicula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Idioma">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pelicula">
+              <PropertyRef Name="Idioma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSucurSala">
+          <End Type="CineVModel.Sucursal" Role="Sucursal" Multiplicity="0..1" />
+          <End Type="CineVModel.Sala" Role="Sala" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sucursal">
+              <PropertyRef Name="CodigoCine" />
+            </Principal>
+            <Dependent Role="Sala">
+              <PropertyRef Name="Sucur" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCargoUsuario">
+          <End Type="CineVModel.Tipo" Role="Tipo" Multiplicity="0..1" />
+          <End Type="CineVModel.Usuario" Role="Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="Tipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCodigoUVenta">
+          <End Type="CineVModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="CineVModel.Venta" Role="Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="RutUsuario" />
+            </Principal>
+            <Dependent Role="Venta">
+              <PropertyRef Name="CodigoU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CineVModelStoreContainer" CdmEntityContainer="CineVEntities">
+          <EntitySetMapping Name="Cliente">
+            <EntityTypeMapping TypeName="CineVModel.Cliente">
+              <MappingFragment StoreEntitySet="Cliente">
+                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="Edad" ColumnName="Edad" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RutCli" ColumnName="RutCli" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comuna">
+            <EntityTypeMapping TypeName="CineVModel.Comuna">
+              <MappingFragment StoreEntitySet="Comuna">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="CodigoR" ColumnName="CodigoR" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Entrada">
+            <EntityTypeMapping TypeName="CineVModel.Entrada">
+              <MappingFragment StoreEntitySet="Entrada">
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="NFun" ColumnName="NFun" />
+                <ScalarProperty Name="NBoleto" ColumnName="NBoleto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estreno">
+            <EntityTypeMapping TypeName="CineVModel.Estreno">
+              <MappingFragment StoreEntitySet="Estreno">
+                <ScalarProperty Name="DescripcionE" ColumnName="DescripcionE" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Funcion">
+            <EntityTypeMapping TypeName="CineVModel.Funcion">
+              <MappingFragment StoreEntitySet="Funcion">
+                <ScalarProperty Name="HoraT" ColumnName="HoraT" />
+                <ScalarProperty Name="HoraI" ColumnName="HoraI" />
+                <ScalarProperty Name="Dia" ColumnName="Dia" />
+                <ScalarProperty Name="Estreno" ColumnName="Estreno" />
+                <ScalarProperty Name="SalaId" ColumnName="SalaId" />
+                <ScalarProperty Name="CodPel" ColumnName="CodPel" />
+                <ScalarProperty Name="NombreF" ColumnName="NombreF" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gene">
+            <EntityTypeMapping TypeName="CineVModel.Gene">
+              <MappingFragment StoreEntitySet="Gene">
+                <ScalarProperty Name="DescripcionG" ColumnName="DescripcionG" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Idioma">
+            <EntityTypeMapping TypeName="CineVModel.Idioma">
+              <MappingFragment StoreEntitySet="Idioma">
+                <ScalarProperty Name="DescripcionI" ColumnName="DescripcionI" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pelicula">
+            <EntityTypeMapping TypeName="CineVModel.Pelicula">
+              <MappingFragment StoreEntitySet="Pelicula">
+                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="Sinopsis" ColumnName="Sinopsis" />
+                <ScalarProperty Name="Director" ColumnName="Director" />
+                <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="NombreP" ColumnName="NombreP" />
+                <ScalarProperty Name="IdPelicula" ColumnName="IdPelicula" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Region">
+            <EntityTypeMapping TypeName="CineVModel.Region">
+              <MappingFragment StoreEntitySet="Region">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sala">
+            <EntityTypeMapping TypeName="CineVModel.Sala">
+              <MappingFragment StoreEntitySet="Sala">
+                <ScalarProperty Name="Asientos" ColumnName="Asientos" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="NSala" ColumnName="NSala" />
+                <ScalarProperty Name="Sucur" ColumnName="Sucur" />
+                <ScalarProperty Name="IdSala" ColumnName="IdSala" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sucursal">
+            <EntityTypeMapping TypeName="CineVModel.Sucursal">
+              <MappingFragment StoreEntitySet="Sucursal">
+                <ScalarProperty Name="Comuna" ColumnName="Comuna" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="NombreS" ColumnName="NombreS" />
+                <ScalarProperty Name="CodigoCine" ColumnName="CodigoCine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo">
+            <EntityTypeMapping TypeName="CineVModel.Tipo">
+              <MappingFragment StoreEntitySet="Tipo">
+                <ScalarProperty Name="DescripcionT" ColumnName="DescripcionT" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="CineVModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Edad" ColumnName="Edad" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+                <ScalarProperty Name="RutUsuario" ColumnName="RutUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Venta">
+            <EntityTypeMapping TypeName="CineVModel.Venta">
+              <MappingFragment StoreEntitySet="Venta">
+                <ScalarProperty Name="CodigoC" ColumnName="CodigoC" />
+                <ScalarProperty Name="CodigoU" ColumnName="CodigoU" />
+                <ScalarProperty Name="NBoleto" ColumnName="NBoleto" />
+                <ScalarProperty Name="NVenta" ColumnName="NVenta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

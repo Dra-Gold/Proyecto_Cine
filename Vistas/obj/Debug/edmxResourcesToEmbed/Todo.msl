@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CineVModelStoreContainer" CdmEntityContainer="CineVEntities">
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="CineVModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RutCli" ColumnName="RutCli" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comuna">
+      <EntityTypeMapping TypeName="CineVModel.Comuna">
+        <MappingFragment StoreEntitySet="Comuna">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="CodigoR" ColumnName="CodigoR" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entrada">
+      <EntityTypeMapping TypeName="CineVModel.Entrada">
+        <MappingFragment StoreEntitySet="Entrada">
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="NFun" ColumnName="NFun" />
+          <ScalarProperty Name="NBoleto" ColumnName="NBoleto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estreno">
+      <EntityTypeMapping TypeName="CineVModel.Estreno">
+        <MappingFragment StoreEntitySet="Estreno">
+          <ScalarProperty Name="DescripcionE" ColumnName="DescripcionE" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Funcion">
+      <EntityTypeMapping TypeName="CineVModel.Funcion">
+        <MappingFragment StoreEntitySet="Funcion">
+          <ScalarProperty Name="HoraT" ColumnName="HoraT" />
+          <ScalarProperty Name="HoraI" ColumnName="HoraI" />
+          <ScalarProperty Name="Dia" ColumnName="Dia" />
+          <ScalarProperty Name="Estreno" ColumnName="Estreno" />
+          <ScalarProperty Name="SalaId" ColumnName="SalaId" />
+          <ScalarProperty Name="CodPel" ColumnName="CodPel" />
+          <ScalarProperty Name="NombreF" ColumnName="NombreF" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gene">
+      <EntityTypeMapping TypeName="CineVModel.Gene">
+        <MappingFragment StoreEntitySet="Gene">
+          <ScalarProperty Name="DescripcionG" ColumnName="DescripcionG" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Idioma">
+      <EntityTypeMapping TypeName="CineVModel.Idioma">
+        <MappingFragment StoreEntitySet="Idioma">
+          <ScalarProperty Name="DescripcionI" ColumnName="DescripcionI" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pelicula">
+      <EntityTypeMapping TypeName="CineVModel.Pelicula">
+        <MappingFragment StoreEntitySet="Pelicula">
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Sinopsis" ColumnName="Sinopsis" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="NombreP" ColumnName="NombreP" />
+          <ScalarProperty Name="IdPelicula" ColumnName="IdPelicula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Region">
+      <EntityTypeMapping TypeName="CineVModel.Region">
+        <MappingFragment StoreEntitySet="Region">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sala">
+      <EntityTypeMapping TypeName="CineVModel.Sala">
+        <MappingFragment StoreEntitySet="Sala">
+          <ScalarProperty Name="Asientos" ColumnName="Asientos" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="NSala" ColumnName="NSala" />
+          <ScalarProperty Name="Sucur" ColumnName="Sucur" />
+          <ScalarProperty Name="IdSala" ColumnName="IdSala" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sucursal">
+      <EntityTypeMapping TypeName="CineVModel.Sucursal">
+        <MappingFragment StoreEntitySet="Sucursal">
+          <ScalarProperty Name="Comuna" ColumnName="Comuna" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="NombreS" ColumnName="NombreS" />
+          <ScalarProperty Name="CodigoCine" ColumnName="CodigoCine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo">
+      <EntityTypeMapping TypeName="CineVModel.Tipo">
+        <MappingFragment StoreEntitySet="Tipo">
+          <ScalarProperty Name="DescripcionT" ColumnName="DescripcionT" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="CineVModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="RutUsuario" ColumnName="RutUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Venta">
+      <EntityTypeMapping TypeName="CineVModel.Venta">
+        <MappingFragment StoreEntitySet="Venta">
+          <ScalarProperty Name="CodigoC" ColumnName="CodigoC" />
+          <ScalarProperty Name="CodigoU" ColumnName="CodigoU" />
+          <ScalarProperty Name="NBoleto" ColumnName="NBoleto" />
+          <ScalarProperty Name="NVenta" ColumnName="NVenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

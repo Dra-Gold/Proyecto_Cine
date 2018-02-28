@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D098D7AE-41D0-4054-938C-AE2D8080E26B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vistas</RootNamespace>
+    <AssemblyName>Vistas</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgreUsu.aspx" />
+    <Content Include="Compra.aspx" />
+    <Content Include="Contacto.aspx" />
+    <Content Include="ElimiUsu.aspx" />
+    <Content Include="Imagenes\Captura.PNG" />
+    <Content Include="InicioRecep.aspx" />
+    <Content Include="ModUsu.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Administrador.Master" />
+    <EntityDeploy Include="Todo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Todo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Recep.aspx" />
+    <Content Include="Todo.edmx.diagram">
+      <DependentUpon>Todo.edmx</DependentUpon>
+    </Content>
+    <Content Include="InicioAd.Master" />
+    <Content Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <Content Include="CineVDataSet.xsc">
+      <DependentUpon>CineVDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="CineVDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CineVDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="CineVDataSet.xss">
+      <DependentUpon>CineVDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgregarFun.aspx" />
+    <Content Include="AgregarPeli.aspx" />
+    <Content Include="Bienve.aspx" />
+    <Content Include="BienveUsu.aspx" />
+    <Content Include="BienveVende.aspx" />
+    <Content Include="EliminarFunci.aspx" />
+    <Content Include="ElimiPeli.aspx" />
+    <Content Include="Estilos\bootstrap-theme.css" />
+    <Content Include="Estilos\bootstrap.css" />
+    <Content Include="Imagenes\1.jpg" />
+    <Content Include="InicioAdm.aspx" />
+    <Content Include="inicioVend.aspx" />
+    <Content Include="IniUsuario.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="ModiFunci.aspx" />
+    <Content Include="ModPeli.aspx" />
+    <Content Include="MostraPeli.aspx" />
+    <Content Include="MostrarFuncio.aspx" />
+    <Content Include="RecupeContra.aspx" />
+    <Content Include="RegistroUsua.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\Mostrar.js" />
+    <Content Include="Todo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Todo.edmx</DependentUpon>
+      <LastGenOutput>Todo.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Todo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Todo.edmx</DependentUpon>
+      <LastGenOutput>Todo.cs</LastGenOutput>
+    </Content>
+    <Content Include="VentaVende.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador.Master.cs">
+      <DependentUpon>Administrador.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador.Master.designer.cs">
+      <DependentUpon>Administrador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarFun.aspx.cs">
+      <DependentUpon>AgregarFun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarFun.aspx.designer.cs">
+      <DependentUpon>AgregarFun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarPeli.aspx.cs">
+      <DependentUpon>AgregarPeli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarPeli.aspx.designer.cs">
+      <DependentUpon>AgregarPeli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgreUsu.aspx.cs">
+      <DependentUpon>AgreUsu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgreUsu.aspx.designer.cs">
+      <DependentUpon>AgreUsu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bienve.aspx.cs">
+      <DependentUpon>Bienve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bienve.aspx.designer.cs">
+      <DependentUpon>Bienve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BienveUsu.aspx.cs">
+      <DependentUpon>BienveUsu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BienveUsu.aspx.designer.cs">
+      <DependentUpon>BienveUsu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BienveVende.aspx.cs">
+      <DependentUpon>BienveVende.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BienveVende.aspx.designer.cs">
+      <DependentUpon>BienveVende.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CineVDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CineVDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Compra.aspx.cs">
+      <DependentUpon>Compra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compra.aspx.designer.cs">
+      <DependentUpon>Compra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comuna.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contacto.aspx.cs">
+      <DependentUpon>Contacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacto.aspx.designer.cs">
+      <DependentUpon>Contacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarFunci.aspx.cs">
+      <DependentUpon>EliminarFunci.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EliminarFunci.aspx.designer.cs">
+      <DependentUpon>EliminarFunci.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ElimiPeli.aspx.cs">
+      <DependentUpon>ElimiPeli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ElimiPeli.aspx.designer.cs">
+      <DependentUpon>ElimiPeli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ElimiUsu.aspx.cs">
+      <DependentUpon>ElimiUsu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ElimiUsu.aspx.designer.cs">
+      <DependentUpon>ElimiUsu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entrada.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Estreno.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Funcion.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gene.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Idioma.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InicioAd.Master.cs">
+      <DependentUpon>InicioAd.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioAd.Master.designer.cs">
+      <DependentUpon>InicioAd.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InicioAdm.aspx.cs">
+      <DependentUpon>InicioAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioAdm.aspx.designer.cs">
+      <DependentUpon>InicioAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioRecep.aspx.cs">
+      <DependentUpon>InicioRecep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioRecep.aspx.designer.cs">
+      <DependentUpon>InicioRecep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inicioVend.aspx.cs">
+      <DependentUpon>inicioVend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inicioVend.aspx.designer.cs">
+      <DependentUpon>inicioVend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IniUsuario.aspx.cs">
+      <DependentUpon>IniUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IniUsuario.aspx.designer.cs">
+      <DependentUpon>IniUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModiFunci.aspx.cs">
+      <DependentUpon>ModiFunci.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModiFunci.aspx.designer.cs">
+      <DependentUpon>ModiFunci.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModPeli.aspx.cs">
+      <DependentUpon>ModPeli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModPeli.aspx.designer.cs">
+      <DependentUpon>ModPeli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModUsu.aspx.cs">
+      <DependentUpon>ModUsu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModUsu.aspx.designer.cs">
+      <DependentUpon>ModUsu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostraPeli.aspx.cs">
+      <DependentUpon>MostraPeli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostraPeli.aspx.designer.cs">
+      <DependentUpon>MostraPeli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarFuncio.aspx.cs">
+      <DependentUpon>MostrarFuncio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostrarFuncio.aspx.designer.cs">
+      <DependentUpon>MostrarFuncio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pelicula.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recep.aspx.cs">
+      <DependentUpon>Recep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recep.aspx.designer.cs">
+      <DependentUpon>Recep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecupeContra.aspx.cs">
+      <DependentUpon>RecupeContra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecupeContra.aspx.designer.cs">
+      <DependentUpon>RecupeContra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Region.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroUsua.aspx.cs">
+      <DependentUpon>RegistroUsua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroUsua.aspx.designer.cs">
+      <DependentUpon>RegistroUsua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sala.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sucursal.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Todo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Todo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Todo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Todo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Todo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Venta.cs">
+      <DependentUpon>Todo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VentaVende.aspx.cs">
+      <DependentUpon>VentaVende.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VentaVende.aspx.designer.cs">
+      <DependentUpon>VentaVende.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{63b89652-8f22-46f5-8d2e-3e7bb1d47abf}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report1.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Respal\" />
+    <Folder Include="Venta\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54818</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54818/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

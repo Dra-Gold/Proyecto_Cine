@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.94917cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="NombreF">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!NombreF.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>NombreF</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalles" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>0.60881cm</Top>
+        <Left>6.54967cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.94917cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>El Codigo del Boleto para la Funcion  </Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox20</rd:DefaultName>
+        <Top>0.60881cm</Top>
+        <Left>0.61009cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.93958cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>es</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox21</rd:DefaultName>
+        <Top>0.60881cm</Top>
+        <Left>9.67523cm</Left>
+        <Height>0.6cm</Height>
+        <Width>0.67438cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix4">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>5.96605cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="NRecep">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!NRecep.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>NRecep</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalles1" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Entrada</DataSetName>
+        <Top>0.60881cm</Top>
+        <Left>10.49071cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.96604cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="Textbox46">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>por favor presentar este documento impreso el dia de la funcion.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox46</rd:DefaultName>
+        <Top>1.52797cm</Top>
+        <Left>0.61009cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.51688cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox47">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Gracias Por Preferirnos</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox47</rd:DefaultName>
+        <Top>2.30436cm</Top>
+        <Left>10.88759cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.56917cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>1.23952in</Height>
+    <Style />
+  </Body>
+  <Width>6.76377in</Width>
+  <Page>
+    <PageHeader>
+      <Height>2.46407cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>Captura</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.0321cm</Top>
+          <Left>3.03954cm</Left>
+          <Height>2.36141cm</Height>
+          <Width>9.99313cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="CineVDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>77d2601f-6e7b-4b3a-9a74-f9d5cfcc703c</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>CineVDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Codigo">
+          <DataField>Codigo</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NombreF">
+          <DataField>NombreF</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodPel">
+          <DataField>CodPel</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SalaId">
+          <DataField>SalaId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Estreno">
+          <DataField>Estreno</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dia">
+          <DataField>Dia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HoraI">
+          <DataField>HoraI</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HoraT">
+          <DataField>HoraT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CineVDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\CineVDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>Funcion</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>FuncionTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Entrada">
+      <Query>
+        <DataSourceName>CineVDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="NBoleto">
+          <DataField>NBoleto</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NFun">
+          <DataField>NFun</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NRecep">
+          <DataField>NRecep</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Precio">
+          <DataField>Precio</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EstVen">
+          <DataField>EstVen</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CineVDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\CineVDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>Entrada</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>EntradaTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Captura">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>c48f3337-582d-463c-ad86-b815fb49a6eb</rd:ReportID>
+</Report>

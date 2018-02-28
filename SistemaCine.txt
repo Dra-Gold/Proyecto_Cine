@@ -1,0 +1,151 @@
+create database CineV
+use  CineV
+drop database CineV
+
+create table Region(
+Codigo varchar(6) constraint PKCodigoRegion primary key,
+Nombre varchar(25) 
+)
+
+
+create table Comuna(
+Codigo varchar(6) constraint PKCodigoComuna primary key,
+CodigoR varchar(6) constraint FKCodigoRComuna references Region(Codigo),
+Nombre varchar(25), 
+)
+
+
+
+create table Sucursal(
+  CodigoCine varchar(6) constraint PKCodigoCineSucursal primary key,
+  NombreS varchar(50),
+  Direccion varchar(50),
+  Comuna varchar(6) constraint FKComunaSucursal references Comuna(Codigo),
+)
+
+
+
+create table Sala(
+    IdSala varchar(6) constraint PkIdSalaSala primary key,
+  Sucur varchar(6) constraint FKSucurSala references Sucursal(CodigoCine),
+  NSala numeric,
+  Tipo varchar(25),
+  Asientos int,
+)
+
+create table Gene(
+ Id varchar(6) constraint PkIdGene primary key, 
+ DescripcionG varchar(30),
+)
+
+create table Idioma(
+ Id varchar(6) constraint PkIdIdioma primary key, 
+ DescripcionI varchar(30),
+)
+
+
+create table Pelicula(
+  IdPelicula int identity constraint pkIdPeliculasPelicula primary key,
+  NombreP varchar(50),
+  Genero varchar(6) constraint FKGeneroPelicula references Gene(Id),
+  Idioma varchar(6) constraint FKIdiomaPelicula references Idioma(Id),
+  Director varchar(50),
+  Sinopsis varchar(max),
+  Imagen image,
+)
+
+create table Estreno(
+ Id varchar(6) constraint PkEstrenoId primary key, 
+ DescripcionE varchar(30),
+)
+
+create table Funcion(
+  Codigo int identity constraint PKCodigoFuncion primary Key,
+  NombreF varchar(25),
+  CodPel int constraint FKCodPelFuncion references  Pelicula(IdPelicula),
+  SalaId varchar(6) constraint fkSalaIdFuncion references Sala(IdSala),
+  Estreno varchar(6) constraint fkEstrenoFuncion references Estreno(Id),
+   Dia varchar(50),
+  HoraI varchar(15),
+  HoraT varchar(15),
+  Precio int,
+)
+
+
+create table Tipo(
+Codigo varchar(15) constraint pkCodigoCargo primary key,
+DescripcionT varchar(20),
+)
+
+
+create table Usuario(
+    Id int identity constraint PKIdUsuario primary key,
+  Correo varchar(40) ,
+  Contraseña varchar(15),
+  Nombre varchar(50),
+  Tipo varchar(15) constraint FKCargoUsuario references Tipo(Codigo),
+)
+create table EsVen(
+Id int constraint PKIdEsVen primary key,
+Descripcion varchar(20),
+)
+
+
+create table Entrada(
+  NBoleto int identity  constraint pkNBoletoEntradas primary key,
+  NFun int  constraint fkNFunEntrada references Funcion(Codigo),
+  NRecep varchar(25),
+  Precio int,
+  EstVen int constraint fkEstVenEntrada references EsVen(Id),
+)
+
+
+
+create table Carro(
+NCarro int identity constraint pkNCarroCarro primary key,
+Codig int constraint fkCodigCarro references Usuario(Id),
+Fecha varchar(20)
+)
+
+create table SubCarri(
+Nsc int identity constraint pkNscSubCarri primary key,
+NBoleto int constraint FkNBoletoSubCarri references Entrada(NBoleto),
+Carr int constraint FkCarrSubCarri references Carro(NCarro),
+)
+
+create table Factura(
+    NFactura int identity  constraint PkNFacturaFactura primary key,
+  NVen int constraint FkNVenFactura references Carro(NCarro),
+  Total int ,
+) 
+
+/* Ingreso de informacion al sistema */
+   insert into Region values('1','Metropolitana')
+   insert into Comuna values ('1','1','La Pintana')
+   insert into Comuna values ('2','1','Puente Alto')
+   insert into Sucursal values('1','eCine','No se ','2')
+   insert into Sucursal values('2','eCine Oriente','No se ','1')
+
+   insert into Sala values('1','1',1,'3D',25)
+   insert into Sala values('2','1',2,'3D',30)
+   
+   insert into Sala values('3','2',1,'3D',25)
+   insert into Sala values('4','2',2,'2D',25)
+
+   insert into Gene values('1','Comedia')
+   insert into Gene values('2','Terror')
+
+   insert into Idioma values('1','Español')
+   insert into Idioma values('2','Ingles')
+   
+   insert into Estreno values('1','Estreno')
+   insert into Estreno values('2','No Estreno')
+
+   insert into Tipo values('1','Vendedor')
+   insert into Tipo values('2','Administrador')
+   insert into Tipo values('3','Usuario')
+   insert into Tipo values('4','Recepcionista')
+
+   insert into EsVen values(1,'Vendido')
+   insert into EsVen values(0,'Sin Vender')
+   insert into EsVen values(2,'Reserva')

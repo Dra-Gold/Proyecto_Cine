@@ -1,0 +1,78 @@
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\roslyn\csc.exe
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\roslyn\vbc.exe
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\roslyn\VBCSCompiler.exe
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\Vistas.dll.config
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\Vistas.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\Vistas.pdb
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\obj\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\obj\Debug\Vistas.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\obj\Debug\Vistas.pdb
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\EntityFramework.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\EntityFramework.xml
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\Modelo.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\Modelo.pdb
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\obj\Debug\RdlCompile.cache
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\obj\Debug\RdlCompile.compiled
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\Microsoft.SqlServer.Types.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Vistas\bin\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Cine\Vistas\bin\roslyn\csc.exe
+C:\Cine\Vistas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Cine\Vistas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Cine\Vistas\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Cine\Vistas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Cine\Vistas\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Cine\Vistas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Cine\Vistas\bin\roslyn\System.Collections.Immutable.dll
+C:\Cine\Vistas\bin\roslyn\System.Reflection.Metadata.dll
+C:\Cine\Vistas\bin\roslyn\vbc.exe
+C:\Cine\Vistas\bin\roslyn\VBCSCompiler.exe
+C:\Cine\Vistas\bin\roslyn\VBCSCompiler.exe.config
+C:\Cine\Vistas\bin\Vistas.dll.config
+C:\Cine\Vistas\bin\Vistas.dll
+C:\Cine\Vistas\bin\Vistas.pdb
+C:\Cine\Vistas\bin\EntityFramework.dll
+C:\Cine\Vistas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Cine\Vistas\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Cine\Vistas\bin\Modelo.dll
+C:\Cine\Vistas\bin\Microsoft.SqlServer.Types.dll
+C:\Cine\Vistas\bin\Modelo.pdb
+C:\Cine\Vistas\bin\EntityFramework.xml
+C:\Cine\Vistas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Cine\Vistas\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Cine\Vistas\bin\de\Microsoft.SqlServer.Types.resources.dll
+C:\Cine\Vistas\bin\es\Microsoft.SqlServer.Types.resources.dll
+C:\Cine\Vistas\bin\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Cine\Vistas\bin\it\Microsoft.SqlServer.Types.resources.dll
+C:\Cine\Vistas\bin\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Cine\Vistas\bin\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Cine\Vistas\bin\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Cine\Vistas\bin\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Cine\Vistas\bin\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Cine\Vistas\bin\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Cine\Vistas\obj\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Cine\Vistas\obj\Debug\RdlCompile.cache
+C:\Cine\Vistas\obj\Debug\RdlCompile.compiled
+C:\Cine\Vistas\obj\Debug\Vistas.dll
+C:\Cine\Vistas\obj\Debug\Vistas.pdb

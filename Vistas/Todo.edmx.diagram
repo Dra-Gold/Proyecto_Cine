@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9f076b7371f446e0866a9be83809fe1b" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="CineVModel.Cliente" Width="1.5" PointX="12" PointY="9.625" />
+        <EntityTypeShape EntityType="CineVModel.Comuna" Width="1.5" PointX="3" PointY="1.625" />
+        <EntityTypeShape EntityType="CineVModel.Entrada" Width="1.5" PointX="12" PointY="1.625" />
+        <EntityTypeShape EntityType="CineVModel.Estreno" Width="1.5" PointX="7.5" PointY="11" />
+        <EntityTypeShape EntityType="CineVModel.Funcion" Width="1.5" PointX="9.75" PointY="1" />
+        <EntityTypeShape EntityType="CineVModel.Gene" Width="1.5" PointX="5.25" PointY="8.75" />
+        <EntityTypeShape EntityType="CineVModel.Idioma" Width="1.5" PointX="5.25" PointY="6.375" />
+        <EntityTypeShape EntityType="CineVModel.Pelicula" Width="1.5" PointX="7.5" PointY="6.875" />
+        <EntityTypeShape EntityType="CineVModel.Region" Width="1.5" PointX="0.75" PointY="1.875" />
+        <EntityTypeShape EntityType="CineVModel.Sala" Width="1.5" PointX="7.5" PointY="1.5" />
+        <EntityTypeShape EntityType="CineVModel.Sucursal" Width="1.5" PointX="5.25" PointY="1.625" />
+        <EntityTypeShape EntityType="CineVModel.Tipo" Width="1.5" PointX="9.75" PointY="6.75" />
+        <EntityTypeShape EntityType="CineVModel.Usuario" Width="1.5" PointX="12" PointY="6.125" />
+        <EntityTypeShape EntityType="CineVModel.Venta" Width="1.5" PointX="14.25" PointY="1.5" />
+        <AssociationConnector Association="CineVModel.FKCodigoCVenta" />
+        <AssociationConnector Association="CineVModel.FKCodigoRComuna" />
+        <AssociationConnector Association="CineVModel.FKComunaSucursal" />
+        <AssociationConnector Association="CineVModel.FkNBoletoVenta" />
+        <AssociationConnector Association="CineVModel.fkNFunEntrada" />
+        <AssociationConnector Association="CineVModel.fkEstrenoFuncion" />
+        <AssociationConnector Association="CineVModel.FKCodPelFuncion" />
+        <AssociationConnector Association="CineVModel.fkSalaIdFuncion" />
+        <AssociationConnector Association="CineVModel.FKGeneroPelicula" />
+        <AssociationConnector Association="CineVModel.FKIdiomaPelicula" />
+        <AssociationConnector Association="CineVModel.FKSucurSala" />
+        <AssociationConnector Association="CineVModel.FKCargoUsuario" />
+        <AssociationConnector Association="CineVModel.FKCodigoUVenta" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

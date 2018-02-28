@@ -1,0 +1,4 @@
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Modelo\bin\Debug\Modelo.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Modelo\obj\Debug\Modelo.dll
+C:\Users\Pedro\Documents\Visual Studio 2015\Projects\Cine\Modelo\obj\Debug\Modelo.pdb

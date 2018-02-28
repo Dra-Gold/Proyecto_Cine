@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vistas", "Vistas\Vistas.csproj", "{D098D7AE-41D0-4054-938C-AE2D8080E26B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{63B89652-8F22-46F5-8D2E-3E7BB1D47ABF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D098D7AE-41D0-4054-938C-AE2D8080E26B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D098D7AE-41D0-4054-938C-AE2D8080E26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D098D7AE-41D0-4054-938C-AE2D8080E26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D098D7AE-41D0-4054-938C-AE2D8080E26B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B89652-8F22-46F5-8D2E-3E7BB1D47ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B89652-8F22-46F5-8D2E-3E7BB1D47ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B89652-8F22-46F5-8D2E-3E7BB1D47ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B89652-8F22-46F5-8D2E-3E7BB1D47ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
